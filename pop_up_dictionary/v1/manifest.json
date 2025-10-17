@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Synonym Finder",
+  "version": "1.0",
+  "description": "Select a word on any page to find its synonyms.",
+  "permissions": [],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "action": {
+    "default_title": "Synonym Finder"
+  }
+}
