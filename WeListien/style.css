@@ -1,0 +1,15 @@
+button {
+    background-color: #020202;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    margin: 1px 100px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
