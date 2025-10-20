@@ -1,15 +1,81 @@
-button {
-    background-color: #020202;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    
-    font-size: 16px;
-    margin: 1px 100px;
-    cursor: pointer;
-    justify-content: center;
+#songcloud {
+    display: none;
+}
+
+#song-Player {
+    block-size: 400px;
+    background-color: #4D1116;
+    width: 400px;
+    border-radius: 25px;
+    position:relative
+}
+
+#song-Player-innerBlock { 
+    width:320px;
+    height: 320px;
+    background-color: #951B0E;
+    border-radius: 20px;
+    margin:50px 40px 40px 40px;
+    position:absolute
+}
+
+.options-icon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%) matrix(-1, 0, 0, 1, 0, 0); /* Center horizontally and flip */
+    color: #D8B116;
+    border: 2px solid blue;
+    /* I added a blue border so you can see it */
+}
+
+#play-options-grid {
+    display: grid;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px;
+    gap: 30px;
+    justify-items: center;
     align-items: center;
-    display: block;
+}
+
+
+/* -------------------SVG ICONS-------------------- */
+.more-options-icon {
+    position:absolute;
+    background-image: url('data:image/svg+xml,<svg width="46" height="46" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 26C25.1046 26 26 25.1046 26 24C26 22.8954 25.1046 22 24 22C22.8954 22 22 22.8954 22 24C22 25.1046 22.8954 26 24 26Z" stroke="%23D8B116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 26C39.1046 26 40 25.1046 40 24C40 22.8954 39.1046 22 38 22C36.8954 22 36 22.8954 36 24C36 25.1046 36.8954 26 38 26Z" stroke="%23D8B116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 26C11.1046 26 12 25.1046 12 24C12 22.8954 11.1046 22 10 22C8.89543 22 8 22.8954 8 24C8 25.1046 8.89543 26 10 26Z" stroke="%23D8B116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 48px;
+    height: 40px;
+    top: 4px;
+    right: 16px;
+}
+
+.skip-back-icon {
+    background-image: url('data:image/svg+xml,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 10V38M38 8L18 24L38 40V8Z" stroke="%23D8B116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+.skip-front-icon{
+    background-image: url('data:image/svg+xml,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M38 10V38M10 8L30 24L10 40V8Z" stroke="%23D8B116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+.play-icon {
+    background-image: url('data:image/svg+xml,<svg width="52" height="54" viewBox="0 0 52 54" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23filter0_d_1_56)"><path d="M26 44C37.0457 44 46 35.0457 46 24C46 12.9543 37.0457 4 26 4C14.9543 4 6 12.9543 6 24C6 35.0457 14.9543 44 26 44Z" stroke="%23D8B116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 16L34 24L22 32V16Z" stroke="%23D8B116" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><defs><filter id="filter0_d_1_56" x="-2" y="0" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_56"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_56" result="shape"/></filter></defs></svg>');
+    width:48px;
+    height:48px;
+}
+
+.icon:hover {
+    /* This scales the element to 105% of its original size */
+    transform: scale(1.1);
 }
