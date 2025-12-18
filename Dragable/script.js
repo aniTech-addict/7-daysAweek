@@ -14,18 +14,15 @@ document.addEventListener("DOMContentLoaded",()=>{ // Execution starts only afte
         })
     })
 
-    containers.forEach(container => {
-        container.addEventListener('dragover', e => {
-            e.preventDefault()
-        });
-
-        container.addEventListener('drop', e => {
-            e.preventDefault();
-            const container = e.target.closest('.container');
-            if (container) {
-                const draggable = document.querySelector('.dragging');
-                container.appendChild(draggable);
-            }
-        });
-    });
+    containers.forEach((container)=>{
+        container.addEventListener('dragover', ()=>{
+            container.addEventListener('drop',()=>{
+                console.log("Hitting")
+                const draggable = document.querySelector('.draggable');
+                container.appendChild(draggable)
+                console.log(draggable)
+            })
+        })
+    })
 })
+
