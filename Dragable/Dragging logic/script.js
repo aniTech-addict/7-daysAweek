@@ -16,13 +16,12 @@ document.addEventListener("DOMContentLoaded",()=>{ // Execution starts only afte
 
     containers.forEach((container)=>{
         container.addEventListener('dragover', ()=>{
-            container.addEventListener('drop',()=>{
-                console.log("Hitting")
-                const draggable = document.querySelector('.draggable');
-                container.appendChild(draggable)
-                console.log(draggable)
-            })
+            console.log("Dragging over")
+            const draggable = document.querySelector(".dragging");
+            container.appendChild(draggable);
         })
+
+        
     })
 })
 
