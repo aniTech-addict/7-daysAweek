@@ -1,0 +1,51 @@
+body {
+    color:rgb(221, 221, 221);
+  background-color: rgba(24, 24, 24);
+}
+
+.container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-column {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  flex: 1;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.task-column h2 {
+  text-align: center;
+}
+
+.task {
+  background-color: #4d1c1c;
+  border: 1px solid #672828;
+  border-radius: 3px;
+  padding: 8px;
+  cursor: grab;
+}
+
+.task.dragging{
+    opacity: 0.5;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+@media (width < 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
